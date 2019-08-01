@@ -1,0 +1,76 @@
+{
+    "packages": [
+        {
+            "name": "studuino",
+            "maintainer": "Artec",
+            "websiteURL": "http://www.artec-kk.co.jp",
+            "email": "support@artec-kk.co.jp",
+            "help": {
+                "online": "http://www.artec-kk.co.jp/studuino"
+            },
+            "platforms": [
+                {
+                    "name": "Studuino Boards",
+                    "architecture": "avr",
+                    "version": "1.1.0",
+                    "category": "Studuino",
+                    "url": "http://www.artec-kk.co.jp/studuino/data/app_temp/studuino-1.1.zip",
+                    "archiveFileName": "studuino-1.1.zip",
+                    "checksum": "SHA-256:f091571326570a9a27017c87852bace35e9158c25c52c8077d8196a3559109cd",
+                    "size": "36190",
+                    "help": {
+                        "online": "http://www.artec-kk.co.jp/studuino"
+                    },
+                    "boards": [
+                        {
+                            "name": "Studuino"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino",
+                            "name": "avr-gcc",
+                            "version": "4.8.1-arduino5"
+                        },
+                        {
+                            "packager": "arduino",
+                            "name": "avrdude",
+                            "version": "6.0.1-arduino5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Studuino Boards",
+                    "architecture": "avr",
+                    "version": "1.0.0",
+                    "category": "Studuino",
+                    "url": "http://www.artec-kk.co.jp/studuino/data/app_temp/studuino-1.0.zip",
+                    "archiveFileName": "studuino-1.0.zip",
+                    "checksum": "SHA-256:786379fef0085dde9198bbafe19b830b04591b4c988473777dea99e2e7aac230",
+                    "size": "3438",
+                    "help": {
+                        "online": "http://www.artec-kk.co.jp/studuino"
+                    },
+                    "boards": [
+                        {
+                            "name": "Studuino"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino",
+                            "name": "avr-gcc",
+                            "version": "4.8.1-arduino5"
+                        },
+                        {
+                            "packager": "arduino",
+                            "name": "avrdude",
+                            "version": "6.0.1-arduino5"
+                        }
+                    ]
+                }
+            ],
+            "tools": []
+        }
+    ]
+}
