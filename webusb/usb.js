@@ -48,7 +48,7 @@ const connectDevice = async () => {
         }
     )
     console.log(device);
-    // await device.open()
+    await device.open();
     console.log('connectDevice 2');
     // await device.selectConfiguration(1)
     // await device.claimInterface(0)
