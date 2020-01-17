@@ -38,6 +38,20 @@ const auth = () => {
         console.log(error);
     });
 }
-document.getElementById('connect').addEventListener("click", auth, false);
-
+const connect = async () => {
+    const device = await navigator.usb.requestDevice(
+        {
+            'filters': [
+                // { 'vendorId': vendor_id, 'product_id': product_id }
+            ]
+        }
+    )
+    await device.open()
+    await device.selectConfiguration(1)
+    await device.claimInterface(0)
+    const ack_packet = Uint8Array.of(0x00, 0x00, 0xff, 0x00, 0xff, 0x00)
+    await device.transferOut(2, ack_packet)
+}
+// document.getElementById('connect').addEventListener("click", auth, false);
 // document.getElementById('connect').addEventListener("click", findBleDevices, false);
+document.getElementById('connect').addEventListener("click", connect, false);
