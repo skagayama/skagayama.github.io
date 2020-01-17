@@ -9,7 +9,7 @@ const auth = () => {
     navigator.usb.requestDevice(
         {
         'filters': [
-            { 'vendorId': vendorId, 'productId': productId }
+            // { 'vendorId': vendorId, 'productId': productId }
         ]
         }
     ).then(device => {
