@@ -29,7 +29,7 @@ const auth = () => {
         // if (device.serialNumber === serialNumber) {
         //     console.log('success!');
         //     login();
-        //     return device.open;
+            return device.open;
         // } else {
         //     console.log('false!');
         //     alert('認証に失敗しました');
@@ -38,7 +38,7 @@ const auth = () => {
         console.log(error);
     });
 }
-const connect = async () => {
+const connectDevice = async () => {
     const device = await navigator.usb.requestDevice(
         {
             'filters': [
@@ -52,6 +52,6 @@ const connect = async () => {
     const ack_packet = Uint8Array.of(0x00, 0x00, 0xff, 0x00, 0xff, 0x00)
     await device.transferOut(2, ack_packet)
 }
-// document.getElementById('connect').addEventListener("click", auth, false);
+document.getElementById('connect').addEventListener("click", auth, false);
 // document.getElementById('connect').addEventListener("click", findBleDevices, false);
-document.getElementById('connect').addEventListener("click", connect, false);
+// document.getElementById('connect').addEventListener("click", connectDevice, false);
