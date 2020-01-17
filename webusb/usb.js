@@ -38,9 +38,11 @@ const auth = () => {
         console.log(error);
     });
 }
+
+let device;
 const connectDevice = async () => {
     console.log('connectDevice 1');
-    const device = await navigator.usb.requestDevice(
+    device = await navigator.usb.requestDevice(
         {
             'filters': [
                 // { 'vendorId': vendor_id, 'product_id': product_id }
@@ -48,7 +50,7 @@ const connectDevice = async () => {
         }
     )
     console.log(device);
-    await device.open();
+    // await device.open();
     console.log('connectDevice 2');
     // await device.selectConfiguration(1)
     // await device.claimInterface(0)
@@ -58,3 +60,7 @@ const connectDevice = async () => {
 // document.getElementById('connect').addEventListener("click", auth, false);
 // document.getElementById('connect').addEventListener("click", findBleDevices, false);
 document.getElementById('connect').addEventListener("click", connectDevice, false);
+
+setTimeout(() => {
+    device.open();
+}, 20000);
