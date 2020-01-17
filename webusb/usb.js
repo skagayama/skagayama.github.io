@@ -39,6 +39,7 @@ const auth = () => {
     });
 }
 const connectDevice = async () => {
+    console.log('connectDevice 1');
     const device = await navigator.usb.requestDevice(
         {
             'filters': [
@@ -47,12 +48,12 @@ const connectDevice = async () => {
         }
     )
     console.log(device);
-    await device.open()
-    console.log('open');
-    await device.selectConfiguration(1)
-    await device.claimInterface(0)
-    const ack_packet = Uint8Array.of(0x00, 0x00, 0xff, 0x00, 0xff, 0x00)
-    await device.transferOut(2, ack_packet)
+    // await device.open()
+    console.log('connectDevice 2');
+    // await device.selectConfiguration(1)
+    // await device.claimInterface(0)
+    // const ack_packet = Uint8Array.of(0x00, 0x00, 0xff, 0x00, 0xff, 0x00)
+    // await device.transferOut(2, ack_packet)
 }
 // document.getElementById('connect').addEventListener("click", auth, false);
 // document.getElementById('connect').addEventListener("click", findBleDevices, false);
