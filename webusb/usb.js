@@ -38,6 +38,6 @@ const auth = () => {
         console.log(error);
     });
 }
-// document.getElementById('connect').addEventListener("click", auth, false);
+document.getElementById('connect').addEventListener("click", auth, false);
 
-document.getElementById('connect').addEventListener("click", findBleDevices, false);
+// document.getElementById('connect').addEventListener("click", findBleDevices, false);
