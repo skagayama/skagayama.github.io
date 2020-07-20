@@ -3,12 +3,42 @@
         {
             "name": "studuino",
             "maintainer": "Artec",
-            "websiteURL": "http://www.artec-kk.co.jp",
+            "websiteURL": "https://www.artec-kk.co.jp",
             "email": "support@artec-kk.co.jp",
             "help": {
-                "online": "http://www.artec-kk.co.jp/studuino"
+                "online": "https://www.artec-kk.co.jp/studuino"
             },
             "platforms": [
+                {
+                    "name": "Studuino Boards",
+                    "architecture": "avr",
+                    "version": "1.2.0",
+                    "category": "Studuino",
+                    "url": "https://skagayama.github.io/studuino-1.2.zip",
+                    "archiveFileName": "studuino-1.2.zip",
+                    "checksum": "SHA-256:3316b55fcea240f4927b66356b047e0149ba7e0cda4945141a1ce48a54e00d85",
+                    "size": "123258",
+                    "help": {
+                        "online": "https://www.artec-kk.co.jp/studuino"
+                    },
+                    "boards": [
+                        {
+                            "name": "Studuino"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino",
+                            "name": "avr-gcc",
+                            "version": "4.8.1-arduino5"
+                        },
+                        {
+                            "packager": "arduino",
+                            "name": "avrdude",
+                            "version": "6.0.1-arduino5"
+                        }
+                    ]
+                },
                 {
                     "name": "Studuino Boards",
                     "architecture": "avr",
